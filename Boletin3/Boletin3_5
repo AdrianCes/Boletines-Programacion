@@ -1,0 +1,37 @@
+
+package boletin3_5;
+import java.util.Scanner;
+
+public class Boletin3_5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float sueldototal = 0 , sueldofijo = 0 , imptotalv = 0 , km = 0 , distancia = 0 , imptv = 0;
+        int dia = 0 , dm= 0;
+                
+        System.out.println("Cúal es tu sueldo fijo?");
+        sueldofijo = sc.nextFloat();
+        
+        System.out.println("importe total de ventas");
+        imptotalv = sc.nextFloat();
+        
+        System.out.println("Cuantos kilometros se ha desplazado?");
+        km = sc.nextFloat();
+        
+        System.out.println("Días de desplazamiento");
+        dia = sc.nextInt();
+        
+        distancia=km*2; dm=dia*30; imptv=(float)(0.05*imptotalv); 
+        System.out.println("El sueldo total es " + (sueldototal = sueldofijo + distancia + dm + imptv ) + "€");
+        
+        float irpf = 0;
+        int rss = 36;
+        
+        System.out.println("Su sueldo total es " + sueldototal + " , por tanto, hay que restarle irpf que es " + (irpf = (float) (0.18*sueldototal)) + "€");
+        System.out.println("Su sueldo bruto es = al sueldo total - el sueldo liquido, quedaría así " + (sueldototal - irpf - rss) + "€");
+        
+        
+        
+        
+    }
+    
+}
