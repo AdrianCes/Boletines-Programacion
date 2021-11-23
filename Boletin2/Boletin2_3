@@ -1,0 +1,22 @@
+package boletin2_3;
+
+import java.util.Scanner;
+
+
+public class boletin2_3 {
+    public static void main (String []args) {
+                Scanner sc = new Scanner(System.in);
+
+            float euros = 0 , resultado = 0 , cambio = 0 ;
+             
+            System.out.println("Pon a como esta el cambio de euros a dollares");
+            cambio = sc.nextFloat();
+            
+            System.out.println("Dime la cantidad de euros que quieres cambiar a dollares");
+            euros = sc.nextFloat();
+
+            resultado = euros*cambio;
+            System.out.println("El cambio a euros da " + resultado + "€");
+    }
+    
+}
