@@ -1,0 +1,23 @@
+
+package boletinextrav_1;
+import java.util.Scanner;
+
+public class BoletinExtraV_1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double precio1 = 0 , precio2 = 0 ;
+        final double IVA = 1.21;
+        
+        String producto ; 
+       
+        System.out.println("Dime que quieres comprar?");
+        producto = sc.nextLine();
+        
+        System.out.println("Cuanto cuesta " + producto + "?" );
+        precio1 = sc.nextFloat();
+        
+        System.out.println("El precio final de " + producto + " es de " + (precio2 = precio1*IVA) + "€");
+    }
+    
+}
