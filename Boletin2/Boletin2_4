@@ -1,0 +1,22 @@
+
+package boletin2_4;
+
+import java.util.Scanner;
+
+
+public class boletin2_4 {
+    public static void main (String []args) {        
+    Scanner sc = new Scanner(System.in);
+        float resultado1 = 0 ,resultado2 = 0 , resultado3 = 0 , resultado4 = 0 , x = 0 , y = 0;
+        
+        System.out.println("Dime dos valores para calcula su suma, resta, producto y cociente");
+        x = sc.nextFloat();
+        y = sc.nextFloat();
+        
+        resultado1 = x + y;
+        resultado2 = x - y;
+        resultado3 = x * y;
+        resultado4 = x / y;
+        System.out.println("El resultado de la suma " + resultado1 + ", el resultado de la resta es " + resultado2 + ", el resultado del producto es " + resultado3 + ", el resultado del cociente es " + resultado4);
+}
+    }
