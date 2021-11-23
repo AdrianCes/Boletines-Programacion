@@ -1,0 +1,11 @@
+package boletin4;
+
+
+public class Boletin4 {
+
+    public static void main(String[] args) {
+        Libro obxLi2 = new Libro("aaa","aa",2021,(short)450);
+                obxLi2.amosar();
+    }
+    
+}
