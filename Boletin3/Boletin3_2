@@ -1,0 +1,15 @@
+package boletin3_2;
+import java.util.Scanner;
+
+public class Boletin3_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        float  c = 0 ;
+        
+        System.out.println("Grados centigrados que quieras cambiar a Fahrenheit y Kelvin");
+        c = sc.nextFloat();
+        
+        System.out.println( c + "℃, es igual a " + (c*1.8+32) + "F, y " + (c+273.15) + "K");
+    }
+    
+}
