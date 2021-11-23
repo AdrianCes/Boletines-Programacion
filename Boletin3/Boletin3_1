@@ -1,0 +1,20 @@
+
+package boletin3_1;
+import java.util.Scanner;
+
+public class Boletin3_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        float preciop = 0 , precion = 0 , descuento = 0 , porciento = 100;
+        
+        System.out.println("Cuanto cuesta esto?");
+        precion = sc.nextFloat();
+        
+        System.out.println("Cuanto ha pagado por ello?");
+        preciop = sc.nextFloat();
+        
+        System.out.println("Ha pagado " + preciop + "€ , mientras que el precio normal es de " + precion + "€ , por tanto le han descontado el " + (descuento = ((precion - preciop)*porciento)/precion) + "%");
+    }
+    
+}
