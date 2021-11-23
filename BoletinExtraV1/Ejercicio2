@@ -1,0 +1,18 @@
+ackage boletinextra1_2;
+import java.util.Scanner;
+
+public class BoletinExtra1_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String materia = "Programacion";
+        float nota1 = 0 , nota2 = 0 , notafinal = 0;
+        System.out.println("Dime las notas que sacaste en los dos parciales de la materia de " + materia);        
+        nota1 = sc.nextFloat();
+        nota2 = sc.nextFloat();
+        notafinal = (nota1+nota2)/2;
+        System.out.println("la nota del primer examen es " + nota1 + ",la del segundo es " + nota2 + ", y la nota media entre los dos es " + notafinal); 
+        
+
+    }
+    
+}
