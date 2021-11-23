@@ -1,0 +1,16 @@
+package boletinextra1;
+import java.util.Scanner; 
+
+public class BoletinExtra1 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String nombre = "" , fecha = "";
+        
+        nombre = sc.nextLine();
+        fecha = sc.nextLine();
+        
+        System.out.println("Su nombre: " + nombre + "\n" + "Su fecha de nacimiento:" + fecha);
+    }
+    
+}
