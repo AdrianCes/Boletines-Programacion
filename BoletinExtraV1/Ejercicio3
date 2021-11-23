@@ -1,0 +1,25 @@
+package boletinextra1_3;
+import java.util.Scanner;
+
+public class BoletinExtra1_3 {
+  public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      float preciofinal = 0 , descuento = 0 , x = 0, precio = 90 ;
+      String prenda = "";
+      
+      System.out.println("Dime la prenda que quieres comprar");
+      prenda = sc.nextLine();
+      
+      System.out.println("Esta prenda cuesta 90€, quieres aplicar algun descuento? (x%)");
+      x = sc.nextInt();
+      
+      System.out.println("Se le aplicara un descuento del " + x + "%");
+      descuento = x/100;
+      preciofinal = precio*descuento;
+      
+      System.out.println("El precio final de los pantalones es " + preciofinal + "€");
+      
+      
+    }
+    
+}
