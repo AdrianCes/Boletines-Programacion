@@ -1,0 +1,13 @@
+package boletin2_2;
+
+
+public class boletin2_2 {
+   public static void main(String[] args) {
+        double lado = 3 , area = 0;
+    
+        area = Math.pow(lado, 2);
+        System.out.println("El área del cuadrado es " + area);
+        
+      
+    }
+}
