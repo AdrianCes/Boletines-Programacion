@@ -1,0 +1,28 @@
+package boletin3_3;
+import java.util.Scanner;
+
+public class Boletin3_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int b100 = 0 , b20 = 0 , b5 = 0 , m1 = 0 , total = 0;
+        
+        System.out.println("Ingrese el número de billetes de 100 euros ");
+        b100 = sc.nextInt();
+        
+        System.out.println("Ingrese el número de billetes de 20 euros ");
+        b20 = sc.nextInt();
+        
+        System.out.println("Ingrese el número de billetes de 5 euros ");
+        b5 = sc.nextInt();
+        
+        System.out.println("Ingrese el número de monedas de 1 euro ");
+        m1 = sc.nextInt();
+        
+        int x = b100*100;
+        int y = b20*20;
+        int z = b5*5;
+        int a = m1;
+        System.out.println("La cantidad total es igual a " + (total = x + y + z + a) + "€");
+    }
+    
+}
