@@ -1,0 +1,28 @@
+package boletin7_5;
+
+import javax.swing.JOptionPane;
+
+
+public class Boletin7_5 {
+
+
+    public static void main(String[] args) {
+        float x ,y , z;
+        x = Float.parseFloat(JOptionPane.showInputDialog("Ingrese numero"));
+        y = Float.parseFloat(JOptionPane.showInputDialog("Ingrese numero"));
+        z = Float.parseFloat(JOptionPane.showInputDialog("Ingrese numero"));
+        
+        
+        if(x>y && x>z){
+            System.out.println("El número mayor es " + x);
+        }
+        else if (y>x && y>z){
+            System.out.println("El número mayor es " + y);
+        }
+        else{
+            System.out.println("El número mayor es " + z);
+        }
+        
+    }
+    
+}
