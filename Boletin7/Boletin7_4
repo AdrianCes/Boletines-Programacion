@@ -1,0 +1,38 @@
+
+package boletin8_4;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class Boletin8_4 {
+
+
+    public static void main(String[] args) {
+        float peso1 , peso2 , dpeso;
+        String nombre1, nombre2;
+        
+        Scanner sc = new Scanner(System.in);
+        
+            System.out.println("Cual es el nombre de la persona 1?");
+            nombre1 = sc.nextLine();
+        
+            peso1 = Float.parseFloat(JOptionPane.showInputDialog("Ingrese el peso de " + nombre1));
+            
+            
+            System.out.println("Cual es el nombre de la persona 2?");
+            nombre2 = sc.nextLine();
+            
+            peso2 = Float.parseFloat(JOptionPane.showInputDialog("Ingrese es el peso de " + nombre2));
+            
+            if(peso1>peso2){
+                System.out.println("La persona que pesa más, pesa " + peso1 + "\n" + "La diferencia de peso es " + (dpeso = peso1 - peso2));
+            }
+            else{
+                System.out.println("La persona que pesa más, pesa " + peso2 + "\n" + "La diferencia de peso es " + (dpeso = peso2 - peso1));
+            }
+            
+           
+    }
+    
+}
