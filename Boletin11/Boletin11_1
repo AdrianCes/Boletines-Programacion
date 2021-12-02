@@ -1,0 +1,25 @@
+import javax.swing.JOptionPane;
+
+
+public class Boletin11_1 {
+
+
+    public static void main(String[] args) {
+                int numero2, numero1= Integer.parseInt(JOptionPane.showInputDialog("Jugador 1 introduce numero menor que 50"));
+        if (numero1>50){
+            System.out.println("Error el numero tiene qua ser menor que 50");
+        }
+        else {
+        do {
+            numero2 = Integer.parseInt(JOptionPane.showInputDialog("Jugador 2 adivine el numero"));
+            if (numero2 < numero1) {
+                System.out.println("Es mas grande");
+            } else if (numero2 > numero1) {
+                System.out.println("Es mas pequeño");
+            }
+        } while (numero1 != numero2);
+        System.out.println("Acertaste el numero!!!! \nFelicidades");
+    }
+    
+    }
+}
