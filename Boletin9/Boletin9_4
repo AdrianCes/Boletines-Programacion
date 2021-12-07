@@ -1,0 +1,10 @@
+public class Boletin9_4 {
+
+
+    public static void main(String[] args) {
+        Producto obx = new Producto();
+
+        obx.productoUno();
+    }
+    
+}
