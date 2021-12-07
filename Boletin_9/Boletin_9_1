@@ -1,0 +1,11 @@
+public class Boletin9_1 {
+
+
+    public static void main(String[] args) {
+        NumNegativos obx = new NumNegativos();
+
+        obx.pedirNum();
+        obx.amosarNum();
+    }
+    
+}
