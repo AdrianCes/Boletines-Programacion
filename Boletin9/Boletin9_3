@@ -1,0 +1,9 @@
+public class Boleitin9_3 {
+
+
+    public static void main(String[] args) {
+        Area obx =new Area();
+        obx.areaRect();
+    }
+    
+}
