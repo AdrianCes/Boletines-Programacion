@@ -1,0 +1,15 @@
+public class Operacion {
+
+    private int acumulador_suma;
+    private double acumulador_producto = 1;
+    private int contador = 10;
+
+    public void calcular() {
+        while (contador <= 90) {
+            acumulador_suma = contador + acumulador_suma;
+            acumulador_producto = contador * acumulador_producto;
+            contador++;
+        }
+        System.out.println("La suma es " + acumulador_suma + " y el producto es " + acumulador_producto);
+}
+}
