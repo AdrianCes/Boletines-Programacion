@@ -1,0 +1,25 @@
+public class Libro extends Biblioteca {
+    private boolean prestado;
+
+    public Libro() {
+    }
+
+    public Libro(String codigo, String titulo, String año, boolean prestado) {
+        super(codigo, titulo, año);
+        this.prestado = prestado;
+    }
+
+    public boolean isPrestado() {
+        return prestado;
+    }
+
+    public void setPrestado(boolean prestado) {
+        this.prestado = prestado;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Libro{" +
+                "prestado='" + prestado + '\'' + '}';
+    }
+}
