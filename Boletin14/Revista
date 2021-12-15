@@ -1,0 +1,26 @@
+public class Revista extends Biblioteca {
+    private String numero;
+
+    public Revista() {
+    }
+
+    public Revista(String codigo, String titulo, String año, String numero) {
+        super(codigo, titulo, año);
+        this.numero = numero;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Revista{" +
+                "numero='" + numero + '\'' +
+                '}';
+    }
+}
