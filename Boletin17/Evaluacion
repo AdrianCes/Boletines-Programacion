@@ -1,0 +1,34 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Evaluacion {
+    Scanner sc = new Scanner(System.in);
+
+    public Evaluacion() {
+
+    }
+
+    static final float TEORICO = 0.40f;
+    static final float PRACTICO = 0.40f;
+
+
+    public static int calcularBoletines(int bolHechos, int bolTotales) {
+        float porBoletines = bolHechos / bolTotales;
+        if (porBoletines > 0.9) return 2;
+        else if (porBoletines >= 0.7) return 1;
+        else return 0;
+    }
+
+    public static void calcularNotas(float nota1Parcial, float nota2Parcial, float notaPractico, int bolHechos, int bolTotales) {
+
+        float notaTeorica = (nota1Parcial + nota2Parcial) / 2;
+        float notaTotal = notaTeorica * TEORICO + notaPractico * PRACTICO + calcularBoletines(bolHechos, bolTotales);
+
+        JOptionPane.showMessageDialog(null,
+                "Examanes de teoría : " + notaTeorica + "\n" +
+                        "  Examen práctico : " + notaPractico + "\n" +
+                        "  Boletines : " + bolHechos * 100 / bolTotales + "%\n" +
+                        " Nota total : " + notaTotal);
+    }
+
+}
