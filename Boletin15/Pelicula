@@ -1,0 +1,28 @@
+public class Pelicula extends Multimedia{
+    private String actorPri;
+    private String actrizPri;
+   
+   public Pelicula() {
+    }
+
+    public Pelicula(String titulo, String autor, String formato, int duracion, String actorPri, String actrizPri) {
+        super(titulo, autor, formato, duracion);
+        this.actorPri = actorPri;
+        this.actrizPri = actrizPri;
+    }
+
+    public void setActorPri(String actorPri) {
+        this.actorPri = actorPri;
+    }
+
+    public void setActrizPri(String actrizPri) {
+        this.actrizPri = actrizPri;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Pelicula{" +
+                "actorPri='" + actorPri + '\'' +
+                ", actrizPri='" + actrizPri + '\'' + '}';
+    }
+}
