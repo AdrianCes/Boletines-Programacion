@@ -1,34 +1,59 @@
-import javax.swing.*;
-import java.util.Scanner;
-
 public class Evaluacion {
-    Scanner sc = new Scanner(System.in);
-
+    private double notaEscrita1;
+    private double notaEscrita2;
+    private double notaPractica;
+    private double boletinesHechos;
+    private double maxBoletines;
+    
     public Evaluacion() {
-
     }
-
-    static final float TEORICO = 0.40f;
-    static final float PRACTICO = 0.40f;
-
-
-    public static int calcularBoletines(int bolHechos, int bolTotales) {
-        float porBoletines = bolHechos / bolTotales;
-        if (porBoletines > 0.9) return 2;
-        else if (porBoletines >= 0.7) return 1;
-        else return 0;
+    
+    public void setNotasEscritas(double escrita1, double escrita2) {
+        notaEscrita1 = escrita1;
+        notaEscrita2 = escrita2;
     }
-
-    public static void calcularNotas(float nota1Parcial, float nota2Parcial, float notaPractico, int bolHechos, int bolTotales) {
-
-        float notaTeorica = (nota1Parcial + nota2Parcial) / 2;
-        float notaTotal = notaTeorica * TEORICO + notaPractico * PRACTICO + calcularBoletines(bolHechos, bolTotales);
-
-        JOptionPane.showMessageDialog(null,
-                "Examanes de teoría : " + notaTeorica + "\n" +
-                        "  Examen práctico : " + notaPractico + "\n" +
-                        "  Boletines : " + bolHechos * 100 / bolTotales + "%\n" +
-                        " Nota total : " + notaTotal);
+    public void setNotaPractica(double practica) {
+        notaPractica = practica;
     }
-
+    public void setBoletinesHechos(int boletines) {
+        boletinesHechos = boletines;
+    }
+    public void setMaxBoletines(int max) {
+        maxBoletines = max;
+    }
+    
+    public double calcularVaremoEscritas() {
+        double mediaEscritas = (notaEscrita1+notaEscrita2)/2;
+        double varemo = mediaEscritas*0.4;
+        
+        return varemo;
+    }
+    public double calcularVaremoPractica() {
+        double varemo = notaPractica*0.4;
+        
+        return varemo;
+    }
+    public double calcularVaremoBoletines() {
+        int varemo = 0;
+        double porcHechos = boletinesHechos/maxBoletines*100;
+        
+        if (porcHechos > 90) {
+            varemo = 2;
+        }else if (porcHechos >= 70) {
+            varemo = 1;
+        }
+        
+        return varemo;
+    }
+    
+    public double calcularNotaFinal() {
+        double puntosEscrita = calcularVaremoEscritas();
+        double puntosPractica = calcularVaremoPractica();
+        double puntosBoletines = calcularVaremoBoletines();
+        
+        double notaFinal = puntosEscrita+puntosPractica+puntosBoletines;
+        
+        return notaFinal;
+    }
+    
 }
